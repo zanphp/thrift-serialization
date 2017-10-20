@@ -187,7 +187,7 @@ class Native extends Abstracts
                     if ($expectType != $readType) {
                         $t1 = $this->getTType($expectType);
                         $t2 = $this->getTType($fType);
-                        throw new TProtocolException("Nova Decode Fail: expected $t1 but got $t2");
+                        throw new TProtocolException("Nova Decode Fail: expected $t1 but got $t2 when parsing ".$args[$fid]['var']);
                     }
                 }
                 $this->setArg($args[$fid], $fType, $xfer);
